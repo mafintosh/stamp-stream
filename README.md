@@ -44,6 +44,7 @@ process.stdin
 		return new Date().toGMTString()+' ';
 	}))
 	.pipe(process.stdout);
+
 process.stdin.resume();
 ```
 
