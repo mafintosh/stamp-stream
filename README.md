@@ -1,15 +1,15 @@
-# Stream-Stamp
+# Stamp-Stream
 
 A through stream that stamps all incoming lines of data with a message and emits it back out
 
-	npm install stream-stamp
+	npm install stamp-stream
 
 ## Usage
 
 Usage is simple
 
 ``` js
-var stamp = require('stream-stamp');
+var stamp = require('stamp-stream');
 var stream = stamp('hello ');
 
 stream.pipe(process.stdout); // "hello world\n" is printed
@@ -33,10 +33,12 @@ stream.write('seco')
 stream.write('nd\nthird\n');
 ```
 
-Stream-Stamp can be useful to stamp output from an application with timestamp or similar.
+Stamp-Stream can be useful to stamp output from an application with timestamp or similar.
 Assume we have a file called `stamp.js`
 
 ``` js
+var stamp = require('stamp-stream');
+
 process.stdin
 	.pipe(stamp(function() {
 		return new Date().toGMTString()+' ';
