@@ -1,0 +1,9 @@
+{
+ "name":"stamp-stream",
+ "version":"0.1.0",
+ "dependencies": {"through":"2.1.x"},
+ "repository": "git://github.com/mafintosh/stamp-stream",
+ "description":"a stream that stamps incoming newlines with a message",
+ "keywords": ["stream", "stamp", "logging"],
+ "author": "Mathias Buus Madsen <mathiasbuus@gmail.com>"
+}
