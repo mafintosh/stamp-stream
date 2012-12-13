@@ -1,6 +1,8 @@
 var through = require('through');
 
 module.exports = function(tag) {
+	if (!tag) return through();
+
 	if (typeof tag !== 'function') {
 		return module.exports(function() {
 			return tag;
